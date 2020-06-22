@@ -22,9 +22,6 @@ function appendData(data) {
 
 
     for (var i = 0; i < obj.length; i++) {
-
-
-
         var fullName = obj[i]["fullName"]
         var userName = obj[i]["userName"]
         var email = obj[i]["email"]
@@ -45,10 +42,7 @@ function appendData(data) {
         row.insertCell(3).innerHTML = email;
         row.insertCell(4).innerHTML = totalPoints;
         row.insertCell(5).innerHTML = `<a href="https://twitter.com/intent/tweet?text=My%20Total%20Point%20on%20HNG%20Leader%20board%20is ${totalPoints}" target="_blank">Share on Twiter</a>`;
-
-
     }
-
 }
 
 
