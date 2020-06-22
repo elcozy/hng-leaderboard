@@ -58,6 +58,7 @@ th {
 body {
   /* background: rgba(153, 153, 153, 0.8); */
   font-family: "Open Sans", sans-serif;
+  min-width: 800px;
 }
 
 section {
