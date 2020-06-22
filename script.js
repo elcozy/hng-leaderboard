@@ -1,6 +1,6 @@
 
 
-fetch("./data.json")
+fetch("/data.json")
     .then(function (response) {
         return response.json();
     })
@@ -28,15 +28,14 @@ function appendData(data) {
         var totalPoints = obj[i]["totalPoints"]
 
 
-        var tblRow = "<tr>" +
-            "<td>" + fullName + "</td>" +
-            "<td>" + userName + "</td>" +
-            "<td>" + email + "</td>" +
-            "<td>" + totalPoints + "</td>" +
-            "</tr>"
-        $(tblRow).appendTo("#userdata tbody");
+        var tableRef = document.getElementById("userDataBody")
+        var row = tableRef.insertRow(i);
 
-        console.log(obj[i]["fullName"])
+        row.insertCell(0).innerHTML = fullName;
+        row.insertCell(1).innerHTML = userName;
+        row.insertCell(2).innerHTML = email;
+        row.insertCell(3).innerHTML = totalPoints;
+
     }
 
 }
