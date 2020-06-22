@@ -34,6 +34,7 @@ function appendData(data) {
         var row = tableRef.insertRow(i);
 
         row.insertCell(0).innerHTML = fullName;
+        userDataBody.className = "userDataBody";
         row.insertCell(1).innerHTML = userName;
         row.insertCell(2).innerHTML = email;
         row.insertCell(3).innerHTML = totalPoints;
