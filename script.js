@@ -1,6 +1,6 @@
 
 
-fetch("/data.json")
+fetch("./data.json")
     .then(function (response) {
         return response.json();
     })
@@ -12,7 +12,9 @@ fetch("/data.json")
     });
 
 function appendData(data) {
-
+    data.sort(function (a, b) {
+        return b.totalPoints - a.totalPoints;
+    });
 
     obj = data;
 
